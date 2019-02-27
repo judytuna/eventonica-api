@@ -12,6 +12,7 @@ Build a REST API
    1. Make a new empty file called app.js: `touch app.js`
    2. In package.json, change the line `"main": "index.js",` to `"main": "app.js",`
 5. Do the bare minimum to set up your first route:
-   1. Require the express module
-   2. Make a new instance of express
-   3. Add a single route for making a GET request to the path `/` that returns a tiny bit of json that says "hello world!" or something
+   1. Require the express module.
+   2. Make a new instance of express.
+   3. Tell this instance to listen for traffic.
+   4. Add a single route for making a GET request to the path `/` that returns a tiny bit of json that says "hello world!" or something.
