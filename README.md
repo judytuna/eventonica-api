@@ -16,3 +16,9 @@ Build a REST API
    2. Make a new instance of express.
    3. Tell this instance to listen for traffic.
    4. Add a single route for making a GET request to the path `/` that returns a tiny bit of json that says "hello world!" or something.
+6. Run your server.
+   1. Install `nodemon` globally with the `-g` flag like this: `npm i -g nodemon` (note: since you used the `-g` flag, it will not install it into your project's node_modules directory).
+   2. type `nodemon` to begin your server! Now every time you save a file in this project, `nodemon` will automatically restart your server for you.
+7. Manually test your server.
+   1. In a web browser, hit `localhost:3000` and see what happens! You should see a JSON string with quotes!!
+   2. In Postman, perform a GET request to `localhost:3000` and see what happens! You should see... that JSON string! Yes, we just did the same thing in two different ways.
