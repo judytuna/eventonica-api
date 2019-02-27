@@ -22,3 +22,6 @@ Build a REST API
 7. Manually test your server.
    1. In a web browser, hit `localhost:3000` and see what happens! You should see a JSON string with quotes!!
    2. In Postman, perform a GET request to `localhost:3000` and see what happens! You should see... that JSON string! Yes, we just did the same thing in two different ways.
+8. Add routes for your new `events` resource! Just have them return strings for now.
+   1. What are the five routes you wrote down that make a RESTful API for `events `? You'll create a new route for each one!
+9. 
