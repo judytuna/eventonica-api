@@ -3,6 +3,14 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
+const data = {
+  events: [
+    { title: "Music Festival", city: "Providence" },
+    { title: "Dance Performance", city: "Pawtucket" },
+    { title: "Karaoke Night", city: "Providence" }
+  ]
+};
+
 app.listen(port, () => console.log(`Eventonica API listening on port ${port}!`))
 
 app.get('/', (req, res) => {
