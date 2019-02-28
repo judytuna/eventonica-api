@@ -1,14 +1,20 @@
 const express = require('express');
 var bodyParser = require('body-parser');
+
+const Pool = require('pg').Pool;
+const pool = new Pool({
+  // user: 'me',
+  host: 'localhost',
+  database: 'eventonica',
+  // password: 'password',
+  port: 5432,
+});
+
 const app = express();
 const port = 3000;
 
 const data = {
-  events: [
-    { title: "Music Festival", city: "Providence" },
-    { title: "Dance Performance", city: "Pawtucket" },
-    { title: "Karaoke Night", city: "Providence" }
-  ]
+  events: []
 };
 
 app.use(bodyParser.json());
