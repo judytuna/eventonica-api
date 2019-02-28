@@ -1,5 +1,5 @@
 const express = require('express');
-
+var bodyParser = require('body-parser');
 const app = express();
 const port = 3000;
 
@@ -11,6 +11,8 @@ const data = {
   ]
 };
 
+app.use(bodyParser.json());
+
 app.listen(port, () => console.log(`Eventonica API listening on port ${port}!`))
 
 app.get('/', (req, res) => {
@@ -20,11 +22,12 @@ app.get('/', (req, res) => {
 // resource: events
 
 app.get('/events', (req, res) => {
-  res.json('GET /events -- get all events. implement me!');
+  res.json(data.events);
 });
 
 app.get('/events/:id', (req, res) => {
-  res.json('GET /events/:id -- get a single event by id. implement me!');
+  console.log(req.params);
+  res.json(data.events[req.params.id]);
 });
 
 app.post('/events', (req, res) => {
