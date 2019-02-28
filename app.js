@@ -31,7 +31,10 @@ app.get('/events/:id', (req, res) => {
 });
 
 app.post('/events', (req, res) => {
-  res.json('POST /events -- make a new event. implement me!');
+  let newEvent = req.body;
+  data.events.push(newEvent);
+  let message = 'Successfully created new event ' + JSON.stringify(newEvent) + ' with ID ' + (data.events.length - 1);
+  res.json(message);
 });
 
 app.put('/events/:id', (req, res) => {
