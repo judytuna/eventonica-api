@@ -103,9 +103,21 @@ const data = {
 3. Postgres.app is very permissive--its defaults are set to allow incoming database connections from any "user" on the same machine as itself. So we don't have to worry about creating a db username and db password. Skip down to "Connecting to the database from Node.js" in this article: [LogRocket | Setting up a RESTful API with Node.js and PostgreSQL(https://blog.logrocket.com/setting-up-a-restful-api-with-node-js-and-postgresql-d96d6fc892d8)
 4. Follow the tutorial! Rewrite your route actions!! Don't forget to use git to save your work and push to GitHub often!
 5. The tutorial teaches you to use `curl`, which is awesome. You can also continue to use Postman.
+6. 
 
 ### Discussion Questions
 
 1. Now, is our data persisted between server restarts? Why?
-2. What are some other differences between the "just put it in a JavaScript object" method and the Postgres method of saving data?
+2. What are some other differences between the "just put it in a JavaScript object" technique for saving data vs saving data to Postgres?
+3. If you were to change your database from a local installation of Postgres to a cloud-hosted Postgres service such as ElephantSQL, what lines of code would you have to change? 
 3. What's the difference between using `curl` and Postman to hit your routes?
+4. What is pg.Client? What is it a client of? Disambiguate the usage of the English word "client" here vs the usage of the word "client" when I say "I have a separate command-line app that's a client of my API".
+5. What is pg.Pool? What are the advantages of using Pool instead of pg.Client? 
+6. What are some techniques for figuring out if an error is coming from your database or your server? 
+
+NEXT
+
+error codes
+try/catch
+ask if people are using promises or callbacks 
+SQL return
