@@ -4,7 +4,8 @@ Build a REST API
 
 ## Build the tiniest server you can with Express.js
 
-1. Fork and clone this repo, which is mostly empty.
+1. Fork and clone this repo, which is mostly empty. (or will be after judy cherry-picks the readme commites and merges to master)
+  - or zero starting code? pros of bo starting code: have them do the steps themselves;  teach some node / npm concepts
 2. Initialize your new project as a node project.
    1. Create a new package.json file with npm's defaults by typing: `npm init -y`
 3. Add Express to your project by typing: `npm i --save express`
