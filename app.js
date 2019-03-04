@@ -14,7 +14,10 @@ const app = express();
 const port = 3000;
 
 const data = {
-  events: []
+  events: [
+    { title: "something", city: "Pawtucket"},
+    { title: "Dance Party", city: "Providence"}
+  ]
 };
 
 app.use(bodyParser.json());
@@ -28,7 +31,13 @@ app.get('/', (req, res) => {
 // resource: events
 
 app.get('/events', (req, res) => {
-  res.json(data.events);
+  res.status(200).json(data.events);
+  // pool.query('SELECT * FROM events', (error, results) => {
+  //   if (error) {
+  //     throw error
+  //   }
+  //   res.status(200).json(results.rows)
+  // });
 });
 
 app.get('/events/:id', (req, res) => {
@@ -37,6 +46,7 @@ app.get('/events/:id', (req, res) => {
 });
 
 app.post('/events', (req, res) => {
+  console.log(req.body);
   let newEvent = req.body;
   data.events.push(newEvent);
   let message = 'Successfully created new event ' + JSON.stringify(newEvent) + ' with ID ' + (data.events.length - 1);
